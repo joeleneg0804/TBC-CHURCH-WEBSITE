@@ -1,0 +1,244 @@
+body {
+  background-color: #FFFFFF;
+  font-family: sans-serif;  
+}
+
+
+#img1 {
+  position: relative;
+  width: 100%;
+  height: 580px;
+  background-image: url('images/img1.jpg');
+  background-size: cover; /* Keeps the whole image visible */
+  background-repeat: no-repeat; /* Prevents the image from duplicating */
+  background-position: center;
+}
+
+
+
+
+/* 2. Content Layer: Rises up from the bottom */
+.text {
+  position: bottom;
+  z-index: 2; 
+  color: #ffffff;
+  text-align: center;
+  background: rgba(1, 53, 19, 0.525);   
+  opacity: 0; 
+  animation: riseFromBottom 5s cubic-bezier(0.1, 1, 0.1, 1) forwards; 
+  animation-delay: 2s; 
+}
+
+
+.text p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Overlock', sans-serif;
+  font-size: 3em;
+  font-weight:bolder;
+  font-style: normal;
+}
+
+#img2 {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background-image: url('images/img2.jpg');
+  background-size: cover; /* Keeps the whole image visible */
+  background-repeat: no-repeat; /* Prevents the image from duplicating */
+  background-position: center;
+  overflow: hidden;
+}
+
+#img2 h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Overlock', sans-serif;
+  font-size: 3em;
+  font-weight:bolder;
+  font-style: normal;
+  color: #ffffff;
+  text-align: center;
+ text-shadow: 
+  -2px -2px 0 #000,  
+  2px -2px 0 #000,
+  -2px  2px 0 #000,
+  2px  2px 0 #000;
+}
+
+#img2 p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Overlock', sans-serif;
+  font-size: 2.3em;
+  font-weight:bolder;
+  font-style: normal;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px  1px 0 #000,
+  1px  1px 0 #000;
+}
+
+#box1 {
+  margin-top: 5px;
+  width: 60%;
+  margin-left: 300px;
+  margin-right: 300px;
+  height: 80px;
+  outline: 3px solid #0B2817;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 10px 2px rgba(0, 0.4, 0, 0.4);
+}
+
+#box1 h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #0B2817;
+  font-family: 'Overlock', sans-serif;
+  font-size: 55px;
+  font-weight:bolder;
+  font-style: normal;
+  text-align: center;
+ text-shadow:
+    3px 3px 0px #FFFFFF,
+    3px 3px 0px #FFFFFF,
+    6px 6px 0px rgba(210, 210, 210, 1),
+    6px 6px 0px rgba(210, 210, 210, 1);
+}
+
+.overlap-3d {
+  /* REPLICATES THE IMAGE SHADOW EXACTLY */
+  /* Move right: 3px | Move down: 3px | Blur softness: 4px | Light transparent grey */
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+  
+  /* Clean spacing adjustments */
+  letter-spacing: -1px; /* Subtle letter overlap matching the image */
+  text-align: center;
+}
+
+/* --- ANIMATION KEYFRAMES --- */
+
+@keyframes revealAndZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  1% {
+    opacity: 1; /* Instantly reveals at 3 seconds */
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.12); /* Zooms up from the bottom pivot point */
+  }
+}
+
+@keyframes riseFromBottom {
+  100% {
+    opacity: 1;
+    transform: translateY(450px); 
+  }
+  30% {
+    opacity: 1; 
+  }
+  0% {
+    opacity: 0;
+    transform: translateY(0); 
+  }
+}
+
+
+#heading {
+  margin: 2px 3px;
+  font-size: 2em;
+  font-weight:600;
+  color: rgb(1, 43, 1);
+}
+
+#tbc-site-nav {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  background-color: #FFFFFF;
+  align-content: center;
+  box-shadow: 0px 2px 2px #8888;
+  width: 100%;
+}
+
+#tbc-site-nav a {
+  float: left;
+  display: block;
+  color: #FFFFFF;
+  background-color: rgb(1, 43, 1);
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+}
+
+#tbc-site-nav a:hover {
+  background-color: rgb(1, 43, 1);
+  color: gold;
+}
+
+#tbc-site-nav a.active {
+  background-color: darkgreen;
+  color: white;
+}
+
+#tbc-site-nav a:active {
+  background-color: darkgreen;
+  color: white;
+}
+
+.block {
+  display: block;
+  float: left;
+  border: none;
+  background-color: #FFFFFF;
+  padding: 10px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* --- MOBILE STYLES (Screens 768px and smaller) --- */
+@media screen and (max-width: 768px) {
+  
+  /* 1. Shrink your large container height */
+  #img1 {
+    height: 400px; /* Reduces container height so it fits on a phone screen */
+  }
+
+  /* 2. Scale down giant text headers */
+  .content h1 {
+    font-size: 2rem !important; /* Smaller size prevents font overlapping or splitting weirdly */
+  }
+
+  .content p {
+    font-size: 1.1rem !important;
+    padding: 0 15px; /* Adds safe padding on the sides so text doesn't touch screen edges */
+  }
+
+  /* 3. Adjust your text animation for a smaller screen */
+  @keyframes riseFromBottom {
+    100% {
+      opacity: 1;
+      transform: translateY(150px); /* Lower distance so it doesn't take too long to travel */
+    }
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+  }
+}
+
+
