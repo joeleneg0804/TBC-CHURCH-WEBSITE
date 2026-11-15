@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Connect With Us — Tongaat Baptist Church</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <img class="brand-mark" src="images/logo.png" alt="Tongaat Baptist Church logo" />
+      <span class="brand-name">tongaat baptist church</span>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-belief.html">Our Belief</a></li>
+        <li><a href="our-ministry-vision.html">Our Ministry Vision</a></li>
+        <li><a href="our-history.html">Our History</a></li>
+        <li class="nav-dropdown">
+          <a href="gallery.html">Gallery</a>
+          <ul class="dropdown-menu">
+            <li><a href="gallery.html">Mothers/Fathers/Fellowship Day</a></li>
+            <li><a href="gallery-family-day.html">Family Day</a></li>
+            <li><a href="gallery-womens-dept.html">Women's Dept</a></li>
+            <li><a href="gallery-mens-dept.html">Men's Dept</a></li>
+            <li><a href="gallery-youth-dept.html">Youth Dept</a></li>
+            <li><a href="gallery-baptism.html">Baptism</a></li>
+          </ul>
+        </li>
+        <li><a href="connect.html" class="active">Connect With Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="connect-page">
+  <div class="connect-layout">
+    <div class="connect-photo">
+      <img src="images/connect-flowers.png" alt="Red amaryllis flowers lining the driveway at Tongaat Baptist Church" />
+    </div>
+
+    <div class="connect-right">
+      <h1 class="connect-title">Connect With Us</h1>
+
+      <form id="contact-form" class="connect-form" action="https://formsubmit.co/tongaatbaptistchurch@gmail.com" method="post">
+        <input type="hidden" name="_subject" value="New message from the Tongaat Baptist Church website" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="form-row">
+          <div class="field field-title">
+            <label for="title">Title</label>
+            <select id="title" name="Title">
+              <option value=""></option>
+              <option>Mr</option>
+              <option>Mrs</option>
+              <option>Ms</option>
+              <option>Miss</option>
+              <option>Dr</option>
+              <option>Pastor</option>
+              <option>Rev</option>
+            </select>
+          </div>
+          <div class="field field-grow">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="First name" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="last-name">Last name</label>
+          <input type="text" id="last-name" name="Last name" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="Phone" />
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" rows="5"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="connect-info">
+    <div class="connect-info-item">
+      <svg class="connect-icon" viewBox="0 0 32 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M16 46C16 46 3 28 3 16a13 13 0 0 1 26 0c0 12-13 30-13 30z"/><circle cx="16" cy="16" r="5"/></svg>
+      <p>43 Belvedere Drive, Tongaat, KwaZulu-Natal, South Africa, 4399</p>
+    </div>
+    <div class="connect-info-item connect-info-email">
+      <svg class="connect-icon" viewBox="0 0 36 26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><rect x="2" y="2" width="32" height="22"/><path d="M2 2l16 13L34 2M2 24l12-12M34 24L22 12"/></svg>
+      <p><a href="mailto:tongaatbaptistchurch@gmail.com">tongaatbaptistchurch@gmail.com</a></p>
+    </div>
+  </div>
+</main>
+
+<section class="connect-map" aria-label="Map showing Tongaat Baptist Church">
+  <iframe
+    title="Tongaat Baptist Church location"
+    src="https://www.google.com/maps?q=43+Belvedere+Dr,+Buffelsdale,+Tongaat,+4399,+South+Africa&output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen></iframe>
+</section>
+
+<footer class="connect-footer">
+  <p>Copyright &copy; <span id="year"></span> Tongaat Baptist Church</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
